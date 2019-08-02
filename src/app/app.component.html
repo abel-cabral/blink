@@ -1,0 +1,27 @@
+<div class="main">
+  <div class="text-center mb-4">
+    <img src="../assets/images/logo.webp" width="200px" height="300px" class="img-fluid" alt="Logo da Página, é um trovão">
+  </div>
+  <div class="input-group">
+    <input type="text" class="form-control" [formControl]="longUrl" id="shortUrl" placeholder="Cole o link aqui" maxlength="150"
+           required>
+    <div class="input-group-append">
+      <button class="btn btn-secondary" type="button" (click)="onSubmit()" *ngIf="!botoesManipucao">
+        <i class="fa fa-bolt" aria-hidden="true"></i>
+        Encurtar URL
+      </button>
+      <button class="btn btn-info" type="button" (click)="toCopy()" *ngIf="botoesManipucao">
+        <i class="fa fa-clipboard" aria-hidden="true"></i>
+        Copiar
+      </button>
+      <button class="btn btn-warning" type="button" (click)="reset()" *ngIf="botoesManipucao">
+        <i class="fa fa-undo" aria-hidden="true"></i>
+        Novo
+      </button>
+    </div>
+  </div>
+  <p class="mt-4 text-center">
+    <a href="https://github.com/abel-cabral/encurtadorURLs">Veja o código fonte</a>
+  </p>
+</div>
+<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }"></ngx-loading>
