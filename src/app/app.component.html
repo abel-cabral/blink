@@ -8,7 +8,7 @@
     <div class="input-group-append">
       <button class="btn btn-secondary" type="button" (click)="onSubmit()" *ngIf="!botoesManipucao">
         <i class="fa fa-bolt" aria-hidden="true"></i>
-        Encurtar URL
+        Encurtar
       </button>
       <button class="btn btn-info" type="button" (click)="toCopy()" *ngIf="botoesManipucao">
         <i class="fa fa-clipboard" aria-hidden="true"></i>
@@ -24,4 +24,4 @@
     <a href="https://github.com/abel-cabral/encurtadorURLs">Veja o código fonte</a>
   </p>
 </div>
-<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }"></ngx-loading>
+<ngx-loading [show]="loading"  [config]="{ backdropBorderRadius: '3px' }"></ngx-loading>
