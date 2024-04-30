@@ -6,7 +6,7 @@ import {map, catchError, retry} from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AppService {
-  private urlServer = 'https://encurtadorx.herokuapp.com/api/';
+  private urlServer = 'https://blink-api.abelcode.dev/api/';
 
   constructor(private http: HttpClient) {
   }
