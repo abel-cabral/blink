@@ -10,6 +10,10 @@
         <i class="fa fa-bolt" aria-hidden="true"></i>
         Encurtar
       </button>
+      <button class="btn btn-warning" type="button" (click)="reset()" *ngIf="!botoesManipucao && botaoLimpar">
+        <i class="fa fa-eraser" aria-hidden="true"></i>
+        Limpar
+      </button>
       <button class="btn btn-info" type="button" (click)="toCopy()" *ngIf="botoesManipucao">
         <i class="fa fa-clipboard" aria-hidden="true"></i>
         Copiar

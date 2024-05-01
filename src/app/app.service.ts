@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {map, catchError, retry} from 'rxjs/operators';
+import { throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -20,8 +21,7 @@ export class AppService {
         map(response => response
         ),
         retry(3),
-        catchError(error => error)
+        catchError(error => throwError(error))
       );
-
   }
 }
