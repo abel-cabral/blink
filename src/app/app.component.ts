@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { AppService } from './app.service';
 import { FormControl } from '@angular/forms';
 import AWN from 'awesome-notifications';
-import { error } from 'console';
 
 @Component({
     selector: 'app-root',
