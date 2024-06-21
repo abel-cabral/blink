@@ -1,3 +1,7 @@
+# Limita Capacidade de Recursos no Build da Imagem
+ARG MAX_CPU=0.5
+ARG MAX_MEMORY=256M
+
 # Etapa 1: Construir o projeto Angular
 FROM node:12 AS build
 
